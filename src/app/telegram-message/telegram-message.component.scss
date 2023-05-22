@@ -1,0 +1,53 @@
+.telegram-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right:12px;
+  align-self: flex-end;
+  
+}
+// .color1 { #000000 };
+// .color2 { #2c2c2c };
+// .color3 { #575757 };
+// .color4 { #838383 };
+// .color5 { #aeaeae };
+.message-content {
+  // box-shadow: 0 2px 2px #00000040;
+  background-color: #212121;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px 15px 15px 0;
+  width: 600px;
+  
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.message-sender {
+  font-weight: bold;
+}
+
+.message-timestamp {
+  font-size: 16px;
+  color: #888;
+  text-align: right;
+}
+
+.message-text p {
+  margin-bottom: 5px;
+}

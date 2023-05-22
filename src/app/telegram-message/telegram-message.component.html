@@ -1,0 +1,32 @@
+
+<div class="content"  *ngFor="let mensaje of messages">
+
+  <div class="telegram-message">
+    <div  class="user-photo"></div>
+    <div class="message-content">
+      <div class="message-header">
+        <div class="message-sender">Chollometro</div>
+       
+      </div>
+      <div class="message-text">
+        <h5 class="card-title">{{ extraerCabecera(mensaje.text) }}</h5>
+        <p class="card-text">{{ extraerTitulo(mensaje.text) }}</p>
+        <ul >
+          <li class="list-group-item"><a [href]="extraerEnlace(mensaje.text)" > 🛒{{ extraerEnlace(mensaje.text) }}</a></li>
+        </ul>
+        <p>🗣 Compartido por <a [href]="crearURLPerfil(extraerCompartidoPor(mensaje.text))">{{ extraerCompartidoPor(mensaje.text) }}</a></p>
+        <p>🔎 {{ extraerLupa(mensaje.text) }}</p>
+        <p>🔥 Más chollos: {{ extraerMasChollos(mensaje.text) }}</p>
+        <div class="message-timestamp">
+          <pre><span *ngIf="mensaje.views >= 1000; else elseBlock">{{(mensaje.views/1000).toFixed(0)}}K </span><ng-template #elseBlock>{{mensaje.views}} </ng-template><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+          <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+        </svg>   {{mensaje.date}}
+        </pre></div>
+        <img src="{{mensaje.media.webpage.url}}" class="img-thumbnail" alt="...">
+      </div>
+    </div>
+  </div>
+  
+</div>
