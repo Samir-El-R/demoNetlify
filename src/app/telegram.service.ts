@@ -7,7 +7,7 @@ import { Message } from './message';
 })
 export class TelegramService {
 
-  private urlApi: string = "https://expres.up.railway.app/messages"
+  private urlApi: string = "https://expre.up.railway.app/messages"
 
   constructor(
     private http: HttpClient) {}
